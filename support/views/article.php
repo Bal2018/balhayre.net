@@ -1,23 +1,23 @@
 <?php
 /**
- * 
  * Author : balhayre 
  * 
  * @var ViewModel $Model
  * @var NSServiceProvider $ServiceProvider
+ *
+ * @var ArticleModel $article
  */
 
-$incorrect_login = $Model->data['incorrect'];
-$timeout = $Model->data['timeout'];
-?>
+$article = $Model->data['article'];
 
+?>
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= $Model->name ?></title>
+    <title><?= $article->title ?> | Bal Hayre</title>
 
     <link rel="stylesheet" href="/resource/css/style.css">
     <link rel="stylesheet" href="/resource/css/nav.css">
@@ -29,24 +29,7 @@ $timeout = $Model->data['timeout'];
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/resource/js/actions.js" defer></script>
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-</head=
+</head>
 <body>
 <nav>
     <ul>
@@ -57,29 +40,15 @@ $timeout = $Model->data['timeout'];
     </ul>
 </nav>
 
-<section class="center" id="home">
+<section class="center" >
+    <div class="spacer"></div>
+    <h1><?= $article->title ?></h1>
 
-    <form class="column" method="post">
-        <label>
-            <input type="text" name="username" title="username">
-        </label>
-        <label>
-            <input type="password" name="password" title="password">
-        </label>
-        <button type="submit">Log In</button>
-
-        <?php if ($incorrect_login){ ?>
-        <div style="background:Red;color:white">
-            <p>Incorrect login details</p>
-        </div>
-        <?php } else if ($timeout) { ?>
-            <div style="background:gold;color:white">
-                <p>Timeout out for 5min, try again later</p>
-            </div>
-        <?php } ?>
-    </form>
-
+     <span class="justify-text">
+         <?= $article->contents ?>
+     </span>
 </section>
+<div class="scroll-progress"></div>
 
 
 <aside>

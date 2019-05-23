@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <database>
+        <host>localhost</host>
+        <user>balhayre_user</user>
+        <pass>balhayre123_pw</pass>
+        <name>balhayre_db</name>
+        <port>3306</port>
+    </database>
+</config>
