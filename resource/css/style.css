@@ -1,0 +1,186 @@
+:root{
+    --background-color: #151938;
+    --link-color:#664180;
+    --primary-font-color: #d0e9ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background : var(--background-color);
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    /*font-family: 'Lora', serif;*/
+    margin:0;
+    padding:0;
+
+    color: whitesmoke;
+}
+
+section {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 100vh;
+    /*font-size: 2em;*/
+
+    margin: 0 auto;
+}
+
+section.force-height{
+    max-height: 100vh;
+}
+
+section a{
+    color: inherit;
+    text-decoration: none;
+    position:relative;
+}
+
+section a:after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left:0;
+    height: 10px;
+    background: var(--link-color);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+section a:hover:after{
+    opacity: 1;
+}
+
+/* Just centers everything to the middle of the parent element */
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/*Spacer block*/
+.spacer{
+    display: block;
+    height: 100px;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clear floats after the columns */
+.row {
+    display:flex;
+    flex-direction: row;
+
+    /*align-items: center;*/
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--primary-font-color);
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: 20px;
+    font-palette: normal;
+    color: var(--primary-font-color);
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: gainsboro;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+/*temp */
+
+.column img{
+    width: 100%;
+    max-width: 200px;
+    position:relative;
+}
+
+#home img{
+    width: 240px;
+    border-radius: 6px;
+    filter: hue-rotate(280deg);
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    section{
+        padding: 0 20px;
+    }
+
+}
+
+/* SOCIALS */
+
+aside{
+    position: fixed;
+    width: 48px;
+    bottom: 30px;
+    left: 0;
+
+    transform: translateY(-50%);
+    top: 50vh;
+    height: 200px;
+}
+
+.social{
+    list-style: none;
+    margin:0;
+    padding: 0;
+
+}
+
+.social li a{
+    color: white;
+    font-size: 20px;
+    width: 46px;
+    height: 46px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1180px) {
+    aside{
+        display: none;
+    }
+}
+
+/* icons */
+
+.section-icon{
+    font-size: 120px;
+    margin: 0;
+}

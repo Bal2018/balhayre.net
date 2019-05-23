@@ -1,0 +1,92 @@
+
+/** For the Projects page**/
+.pop-card{
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-card *:not(img){
+    display: none;
+}
+
+.pop-card h4{
+    letter-spacing: 2px;
+}
+
+.pop-card h4,
+.pop-card p{
+    opacity: 0;
+}
+
+.pop-card.visible h4,
+.pop-card.visible p{
+    opacity: 1;
+}
+
+.top-level-card{
+    background: transparent;
+    transition: all 500ms;
+}
+
+.top-level-card.visible{
+    background: #151938;
+}
+
+.top-level-card img{
+    transition: all 300ms
+}
+
+.top-level-card .close{
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    width: 35px;
+    height: 35px;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.article-collection{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 10px;
+    width: 100%;
+    grid-gap: 10px;
+}
+
+.article-card{
+    background: white;
+    width: auto;
+    overflow: hidden;
+    height: 250px;
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.article-card img{
+    width: 100%;
+}
+
+.article-card h3{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-font-color);
+    position: absolute;
+    background: rgba(0,0,0,0.65);
+    bottom: 0;
+    left:0;
+    right:0;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
