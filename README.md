@@ -2,4 +2,6 @@
 
 [balhayre.net](balhayre.net)
 
-Wiki Available [here](https://github.com/daryl-cecile/RoadsterBlog/wiki)
+This is my first website that I built using PHP. 
+
+This was a project that I developed whilst enrolled at Project Function (2019)
